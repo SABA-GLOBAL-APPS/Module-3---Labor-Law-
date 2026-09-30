@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABA - HRCP المسار الثالث: قانون العمل رقم 14 لسنة 2025</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --saba-navy-dark: #07192F;
+            --saba-navy: #0B2545;
+            --saba-blue: #134074;
+            --saba-blue-light: #EEF4F9;
+            --saba-accent-blue: #1D4ED8;
+            --saba-gold: #C5A059;
+            --saba-gold-light: #FBF7EE;
+            --saba-gold-dark: #9A7B38;
+            --saba-border: #E2E8F0;
+            --saba-slate: #F8FAFC;
+            --saba-text-main: #0F172A;
+            --saba-text-sub: #475569;
+            --sidebar-width: 290px;
+            --header-height: 72px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-subtle: 0 4px 20px -2px rgba(11, 37, 69, 0.06);
+            --shadow-card: 0 10px 25px -5px rgba(11, 37, 69, 0.08);
+            --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background-color: var(--saba-slate);
+            color: var(--saba-text-main);
+            line-height: 1.65;
+            overflow-x: hidden;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--saba-navy-dark) 0%, var(--saba-navy) 60%, #081d38 100%);
+            color: #ffffff;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            overflow-y: auto;
+            padding: 24px 16px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .brand-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            margin-bottom: 24px;
+        }
+
+        .brand-logo-container {
+            width: 82px;
+            height: 82px;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 6px;
+            box-shadow: 0 0 0 3px var(--saba-gold), 0 8px 16px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .brand-logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .brand-org-name {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.2px;
+            line-height: 1.3;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: rgba(197, 160, 89, 0.15);
+            color: var(--saba-gold);
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.35);
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            color: #94A3B8;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link i {
+            font-size: 1rem;
+            width: 22px;
+            text-align: center;
+            color: #64748B;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-link:hover i {
+            color: var(--saba-gold);
+        }
+
+        .nav-link.active {
+            color: #FFFFFF;
+            background: linear-gradient(90deg, rgba(19, 64, 116, 0.9) 0%, rgba(11, 37, 69, 0.7) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link.active i {
+            color: var(--saba-gold);
+        }
+
+        .sidebar-footer {
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+            color: #64748B;
+            text-align: center;
+        }
+
+        .main-wrapper {
+            margin-right: var(--sidebar-width);
+            flex: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: margin 0.3s ease;
+        }
+
+        .top-navbar {
+            height: var(--header-height);
+            background: #ffffff;
+            border-bottom: 1px solid var(--saba-border);
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .top-title-area h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--saba-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-title-area p {
+            font-size: 0.8rem;
+            color: var(--saba-text-sub);
+            font-weight: 500;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .disclaimer-banner-top {
+            background: #FFFBEB;
+            border-right: 6px solid #D97706;
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+            border: 1px solid #FDE68A;
+            border-right-width: 6px;
+        }
+
+        .disclaimer-banner-top i {
+            color: #D97706;
+            font-size: 1.35rem;
+            margin-top: 3px;
+        }
+
+        .disclaimer-banner-top .banner-text {
+            color: #92400E;
+            font-size: 0.92rem;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .disclaimer-banner-bottom {
+            background: #F1F5F9;
+            border: 1px dashed #94A3B8;
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-align: center;
+            color: #475569;
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+
+        .section-card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--saba-border);
+            padding: 32px;
+            box-shadow: var(--shadow-subtle);
+            scroll-margin-top: 90px;
+            transition: var(--transition-smooth);
+        }
+
+        .section-card:hover {
+            box-shadow: var(--shadow-card);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--saba-blue-light);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .section-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-icon-badge {
+            width: 48px;
+            height: 48px;
+            background: var(--saba-blue-light);
+            color: var(--saba-blue);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            border: 1px solid rgba(19, 64, 116, 0.15);
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--saba-navy);
+        }
+
+        .section-subtitle {
+            font-size: 0.86rem;
+            color: var(--saba-text-sub);
+            font-weight: 500;
+        }
+
+        .section-tag {
+            background: var(--saba-gold-light);
+            color: var(--saba-gold-dark);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 20px;
+            margin-top: 16px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 20px;
+            margin-top: 16px;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid var(--saba-border);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            position: relative;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-item:hover {
+            border-color: var(--saba-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(11, 37, 69, 0.05);
+        }
+
+        .card-item-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .card-item-icon {
+            font-size: 1.15rem;
+            color: var(--saba-blue);
+            background: var(--saba-blue-light);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--saba-navy);
+        }
+
+        .card-item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .card-item-list li {
+            position: relative;
+            padding-right: 22px;
+            font-size: 0.92rem;
+            color: var(--saba-text-sub);
+            line-height: 1.55;
+        }
+
+        .card-item-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--saba-gold-dark);
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        .data-table-wrap {
+            overflow-x: auto;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--saba-border);
+            margin-top: 16px;
+            background: #ffffff;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 0.88rem;
+        }
+
+        .data-table th {
+            background: var(--saba-navy);
+            color: #ffffff;
+            padding: 14px 16px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--saba-gold);
+            white-space: nowrap;
+        }
+
+        .data-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--saba-border);
+            color: var(--saba-text-main);
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        .cycle-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .cycle-step {
+            background: #ffffff;
+            border: 1px solid var(--saba-border);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            text-align: center;
+            border-top: 4px solid var(--saba-blue);
+            transition: var(--transition-smooth);
+        }
+
+        .cycle-step:hover {
+            transform: translateY(-4px);
+            border-top-color: var(--saba-gold);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .cycle-step-icon {
+            font-size: 1.5rem;
+            color: var(--saba-blue);
+            margin-bottom: 10px;
+        }
+
+        .cycle-step-title {
+            font-weight: 800;
+            color: var(--saba-navy);
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .cycle-step-desc {
+            font-size: 0.84rem;
+            color: var(--saba-text-sub);
+            line-height: 1.5;
+        }
+
+        .case-study-card {
+            background: linear-gradient(135deg, var(--saba-navy) 0%, var(--saba-blue) 100%);
+            color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 12px 30px rgba(11, 37, 69, 0.2);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+        }
+
+        .case-study-title {
+            color: var(--saba-gold);
+            font-size: 1.3rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .case-tag {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            color: #E2E8F0;
+        }
+
+        .interactive-panel {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--saba-border);
+            padding: 24px;
+        }
+
+        .quiz-option {
+            background: var(--saba-slate);
+            border: 1px solid var(--saba-border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--saba-blue);
+            background: #F1F5F9;
+        }
+
+        .quiz-option.correct {
+            background: #DCFCE7 !important;
+            border-color: #16A34A !important;
+            color: #166534 !important;
+        }
+
+        .quiz-option.incorrect {
+            background: #FEE2E2 !important;
+            border-color: #DC2626 !important;
+            color: #991B1B !important;
+        }
+
+        .feedback-message {
+            margin-top: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            min-height: 24px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--saba-navy);
+            cursor: pointer;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(100%);
+            }
+            .sidebar.mobile-open {
+                transform: translateX(0);
+            }
+            .main-wrapper {
+                margin-right: 0;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .content-container {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <div class="brand-section">
+            <div class="brand-logo-container">
+                <img src="https://i.ibb.co/672N6zy2/Whats-App-Image-2026-08-15-at-11-32-39-AM.jpg" 
+                     alt="شعار جمعية مدراء الأعمال العرب" 
+                     onerror="this.onerror=null; this.src='https://via.placeholder.com/100x100?text=SABA+Logo';">
+            </div>
+            <div class="brand-org-name">جمعية مدراء الأعمال العرب</div>
+            <div class="brand-badge">SABA - HRCP المسار 3</div>
+        </div>
+
+        <ul class="nav-list" id="nav-list-container">
+            <!-- يتم تعبئتها عبر الجافاسكريبت -->
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>جميع الحقوق محفوظة &copy; 2026 لجمعية مدراء الأعمال العرب - SABA</p>
+        </div>
+    </aside>
+
+    <!-- مساحة المحتوى الرئيسية -->
+    <div class="main-wrapper">
+        <header class="top-navbar">
+            <div class="top-title-area">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="تبديل القائمة">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div style="display: inline-block;">
+                    <h1><i class="fa-solid fa-scale-balanced" style="color: var(--saba-gold);"></i> المسار الثالث: قانون العمل رقم 14 لسنة 2025</h1>
+                    <p>دليل التطبيق والامتثال القانوني لإدارة الموارد البشرية (SABA - HRCP)</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-container">
+            <!-- التحذير الإلزامي العلوي -->
+            <div class="disclaimer-banner-top">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="banner-text">
+                    "هذه المواد هي جزء من دليل دراستك لشهادة محترف الموارد البشرية المعتمد والتي تقدمها جمعية مدراء الأعمال العرب - سابا. ولا يجوز توزيعها على الإنترنت أو مشاركتها مع الغير وإلا تضع نفسك تحت طائلة القانون."
+                </div>
+            </div>
+
+            <!-- الأقسام التفاعلية للمسار الثالث -->
+            <div id="dynamic-sections-container"></div>
+
+            <!-- التنبيه الإلزامي السفلي -->
+            <div class="disclaimer-banner-bottom">
+                <i class="fa-solid fa-circle-info" style="color: #64748B;"></i>
+                <span>
+                    "هذه الوسائط أو الإجابات هي مولده بالذكاء الإصطناعي وقد تخطئ أحياناً أو لا تكون دقيقة تماماً، في حالة أنك تريد إستيضاح نقطة معينه يمكنك التواصل مع مدربك بشكل مباشر للمزيد من التفاصيل."
+                </span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const moduleContent = {
+            navLinks: [
+                { id: "sec-hiring-docs", icon: "fa-folder-open", text: "مسوغات التعيين وإجراءات الاستلام" },
+                { id: "sec-probation-gov", icon: "fa-user-clock", text: "فترة الاختبار ونماذج التأمين والعمل" },
+                { id: "sec-contracts", icon: "fa-file-signature", text: "عقود العمل الفردية وضوابط الإنهاء" },
+                { id: "sec-leaves", icon: "fa-calendar-check", text: "منظومة الإجازات الرسمية والمرضية والخاصة" },
+                { id: "sec-penalties", icon: "fa-gavel", text: "لائحة الجزاءات والتحقيق والغياب" },
+                { id: "sec-workhours-foreigners", icon: "fa-business-time", text: "ساعات العمل وتشغيل الأجانب" },
+                { id: "sec-funds-inspection", icon: "fa-building-shield", text: "التزامات الصناديق وتفتيش مكتب العمل" }
+            ],
+            sections: [
+                {
+                    id: "sec-hiring-docs",
+                    icon: "fa-folder-open",
+                    title: "1. مسوغات التعيين الأساسية والمكملة والدورة الإجرائية",
+                    subtitle: "حزمة المستندات الإلزامية لفتح ملف الموظف وتأمين المنشأة قانونياً",
+                    tag: "الامتثال وبدء العلاقة التعاقدية",
+                    description: "يحدد قانون العمل رقم 14 لسنة 2025 الإطار التنظيمي الدقيق لبدء علاقة العمل؛ حيث تلتزم المنشأة باستيفاء مسوغات التعيين الأساسية والمكملة قبل استلام العمل للحد من النزاعات وضمان اكتمال قاعدة البيانات المركزية للعاملين.",
+                    cycleData: [
+                        { icon: "fa-file-lines", title: "المسوغات الأساسية", desc: "أصل المؤهل، الميلاد، الموقف التجنيدي، الفيش والتشبيه، صورة البطاقة، والصور الشخصية." },
+                        { icon: "fa-heart-pulse", title: "الكشف الطبي ودخول الخدمة", desc: "استمارة 111 تأمين صحي وتحليل السموم الصادر حصرياً من اللجان الطبية الرسمية المعتمدة." },
+                        { icon: "fa-id-card-clip", title: "كعب العمل وإخطار التشغيل", desc: "شهادة القيد المرسلة لمكتب العمل المختص قانوناً لتجنب الغرامات المالية المفاجئة." },
+                        { icon: "fa-folder-tree", title: "إقرار الاستلام وقاعدة البيانات", desc: "التوقيع واعتماد الإدارات وفتح الملف الوظيفي واستيفاء استمارة (1) تأمينات اجتماعية." }
+                    ],
+                    cards: [
+                        {
+                            icon: "fa-list-check",
+                            title: "المسوغات الأساسية (تستوفى لكافة الوظائف)",
+                            items: [
+                                "أصل شهادة المؤهل الدراسي وأصل شهادة الميلاد المميكنة.",
+                                "أصل شهادة تأدية الخدمة العسكرية أو الإعفاء النهائي أو المؤقت منها.",
+                                "صحيفة الحالة الجنائية (فيش وتشبيه) سارية وموجهة باسم المنشأة.",
+                                "صورة بطاقة الرقم القومي (سارية) وعدد (6) صور شخصية حديثة.",
+                                "شهادة القيد (كعب العمل) والكشف الطبي الابتدائي (استمارة 111).",
+                                "شهادة قياس مستوى المهارة وترخيص مزاولة الحرفة (للمهن الفنية) أو الشهادة الصحية (لتداول الأغذية)، وكارنيه النقابة للمهن النقابية."
+                            ]
+                        },
+                        {
+                            icon: "fa-file-invoice",
+                            title: "المسوغات المكملة (بحسب طبيعة الوظيفة والخبرة)",
+                            items: [
+                                "برنت تأمينات حديث يثبت أن الموظف (غير مؤمن عليه) لدى أي جهة عمل أخرى.",
+                                "طابعة مدد تأمينية سابقة معتمدة لحساب وتدقيق رصيد الإجازات السنوية المستحقة.",
+                                "إخلاء طرف رسمي ومعتمد من آخر جهة عمل كان يعمل بها الموظف.",
+                                "صورة من استمارة (6) تأمينات من آخر منشأة لإثبات إنهاء الخدمة رسمياً.",
+                                "شهادات الخبرة السابقة والدورات التدريبية الموثقة الداعمة للمسمى الوظيفي."
+                            ]
+                        },
+                        {
+                            icon: "fa-clipboard-user",
+                            title: "إجراءات ما بعد استيفاء المسوغات",
+                            items: [
+                                "تحرير إقرار استلام العمل وتوقيعه من الموظف واعتماده من مديره المباشر والإدارات المعنية (الأمن، تكنولوجيا المعلومات، الموارد البشرية).",
+                                "توقيع عقد العمل بنسخه الرسمية الثلاث وتحرير استمارة (1) تأمينات اجتماعية.",
+                                "توقيع الإقرارات المنظمة الداخلية (مثل إقرار الورديات المتغيرة، سياسة السرية، واستلام العهد).",
+                                "تحديث قاعدة بيانات العاملين المركزية (البيانات الشخصية، الوظيفية، التأمينية، والتجنيدية)."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sec-probation-gov",
+                    icon: "fa-user-clock",
+                    title: "2. فترة الاختبار والتعامل مع الهيئات الحكومية (التأمين الصحي ومكتب العمل)",
+                    subtitle: "ضوابط المادة القانونية لفترة الاختبار، تسليم كعب العمل، واستخراج البطاقة الصحية",
+                    tag: "الرقابة والمتابعة الإجرائية",
+                    description: "تنظم القوانين واللوائح التنفيذية العلاقة الإجرائية الدقيقة بين المنشأة والمكاتب التابعة لوزارة العمل والهيئة العامة للتأمين الصحي والهيئة القومية للتأمين الاجتماعي، محددة المهل الزمنية الصارمة للاستيفاء.",
+                    cards: [
+                        {
+                            icon: "fa-stopwatch",
+                            title: "قواعد فترة الاختبار (Probation Period)",
+                            items: [
+                                "تحدد فترة الاختبار في عقد العمل، ولا يجوز أن تزيد بأي حال على ثلاثة أشهر للموظف المستجد.",
+                                "لا يجوز تعيين العامل تحت الاختبار أكثر من مرة واحدة لدى نفس صاحب العمل، حتى وإن استقال وعاد لنفس الوظيفه.",
+                                "إذا تم استدعاء العامل لأداء الخدمة العسكرية أو الاستدعاء أثناء فترة الاختبار، يُعتبر قد اجتاز فترة الاختبار بنجاح.",
+                                "استمرار العامل في أداء عمله بعد انقضاء الأشهر الثلاثة يعتبر إقراراً صريحاً من صاحب العمل بصلاحيته وثبوت عقده."
+                            ]
+                        },
+                        {
+                            icon: "fa-envelope-open-text",
+                            title: "إجراءات ودورة تسليم كعب العمل",
+                            items: [
+                                "يجب إرسال شهادة القيد (كعب العمل) إلى مكتب العمل المختص خلال شهر من تاريخ استلام العمل الفعلي.",
+                                "استيفاء الجزء الخاص ببيانات جهة العمل أسفل النموذج واعتماده بخاتم المنشأة وتوقيع المدير المسئول.",
+                                "إعداد كشف تسليم من نسختين مدوناً به الأسماء والأرقام القومية ومرفقاً به أصول شهادات القيد.",
+                                "استلام النسخة الثانية من الكشف مختومة بختم 'الوارد' الرسمي من مكتب العمل وحفظها في ملف التفتيش للمنشأة.",
+                                "إتاحة استخراج كعب العمل رقمياً عبر بوابة 'مصر الرقمية' وموقع وزارة العمل لا يعفي من توثيق التعيين."
+                            ]
+                        },
+                        {
+                            icon: "fa-id-card",
+                            title: "استمارة 111 ونموذج حصر المنتفعين",
+                            items: [
+                                "الكشف الطبي الابتدائي (استمارة 111) شرط قانوني إلزامي قبل تسليم العمل ولا يعتد بالتحاليل الخارجية في إثبات فحص السموم.",
+                                "فور انتهاء فترة الاختبار بنجاح (3 أشهر)، يتم تحرير نموذج 'حصر المنتفعين' للتأمين الصحي.",
+                                "إرفاق أصل الكشف الطبي (للاطلاع)، برنت تأميني، صور شخصية، وصورة بطاقة الرقم القومي لفرع التأمين الصحي.",
+                                "استلام البطاقة العلاجية الصحية وتسليمها للموظف مع توقيعه على صورة النموذج بالاستلام لضمان التغطية الطبية الكاملة."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sec-contracts",
+                    icon: "fa-file-signature",
+                    title: "3. هندسة عقود العمل الفردية والجماعية وضوابط الإنهاء والتعويض",
+                    subtitle: "العقود المحددة وغير المحددة، فترات الإخطار، وحالات الفصل التعسفي والاستقالة",
+                    tag: "العلاقة العقدية والإنهاء",
+                    description: "يحدد القانون الفروق الجوهرية بين عقود العمل المحددة المدة وغير المحددة وعقود إنجاز المهام، واضعاً حماية خاصة لأجور وحقوق العمال وضوابط الاستقالة القانونية لتلافي المنازعات القضائية.",
+                    tableData: {
+                        headers: ["وجه المقارنة", "عقد العمل محدد المدة", "عقد العمل غير محدد المدة", "عقد لإنجاز مهمة معينة"],
+                        rows: [
+                            [
+                                "تاريخ البداية والنهاية",
+                                "له تاريخ بداية وله تاريخ نهاية محدد بدقة.",
+                                "له تاريخ بداية ولا ينص فيه على تاريخ نهاية.",
+                                "يبدأ بتاريخ محدد وينتهي حتماً بتمام إنجاز العمل المتفق عليه."
+                            ],
+                            [
+                                "حالات التحول والتجديد",
+                                "يتجدد باتفاق كتابي صريح، ويتحول لغير محدد إذا استمر الطرفان في تنفيذه دون تجديد مكتوب.",
+                                "يستمر سارياً بطبيعته ولا ينتهي إلا بمسوغ قانوني مشروع أو بلوغ سن التقاعد.",
+                                "إذا استمر الطرفان في تنفيذه بعد إنجاز العمل المطلوب ينقلب لعقد غير محدد المدة."
+                            ],
+                            [
+                                "مهلة الإخطار بالإنهاء",
+                                "حسب الاتفاق المبرم في العقد وتكون ملزمة للعامل فقط في حال عدم رغبته بالتجديد.",
+                                "ملزمة للطرفين بمدة لا تقل عن 3 أشهر؛ وتمنح العامل 8 ساعات أسبوعياً مدفوعة الأجر للبحث عن عمل.",
+                                "ترتبط بانتهاء العمل الميداني أو بحسب الشروط العقدية المقررة مسبقاً."
+                            ],
+                            [
+                                "التعويض عند الفصل التعسفي",
+                                "أجر المدة المتبقية من العقد أو التعويض الاتفاقي المنصوص عليه بما لا يخالف القانون.",
+                                "تعويض لا يقل عن أجر شهرين عن كل سنة من سنوات الخدمة الفعلية للعامل.",
+                                "يخضع لتقدير القضاء العمالي والضرر الواقع جراء الإخلال المبكر بالعقد."
+                            ]
+                        ]
+                    },
+                    cards: [
+                        {
+                            icon: "fa-file-contract",
+                            title: "المكونات الأساسية الإلزامية في صياغة العقد",
+                            items: [
+                                "اسم المنشأة، عنوان مقرها، نشاطها، واسم صاحب العمل أو المدير المسئول قانوناً.",
+                                "اسم العامل، مؤهله الدراسي، مهنته، محل إقامته، ورقمه القومي ورقم تأمينه الاجتماعي.",
+                                "طبيعة ونوع العمل محل التعاقد مع تحديد فترة الاختبار (بما لا يجاوز 3 أشهر).",
+                                "نوع الأجر المتفق عليه وموعد وطريقة الوفاء به وأي بدلات أو حوافز أو مزايا عينية مقررة."
+                            ]
+                        },
+                        {
+                            icon: "fa-right-from-bracket",
+                            title: "شروط وضوابط الاستقالة القانونية والعدول عنها",
+                            items: [
+                                "يجب أن تكون الاستقالة مكتوبة صراحة وموقعة من العامل، وتعتمد من الجهة الإدارية المختصة (مكتب العمل).",
+                                "يجب على العامل الاستمرار في عمله لحين بت صاحب العمل فيها خلال 10 أيام، وإلا اعتبرت مقبولة بفوات المدة.",
+                                "يحق للعامل العدول عن استقالته كتابياً خلال 10 أيام من تاريخ إخطاره بالقبول، وحينها تعتبر الاستقالة كأن لم تكن.",
+                                "إخلاء الطرف لا يعد مبرئاً لذمة العامل إلا بتوقيع كافة الإدارات المختصة وتسليم كامل العهد."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sec-leaves",
+                    icon: "fa-calendar-check",
+                    title: "4. أحكام منظومة الإجازات الرسمية والمرضية والخاصة",
+                    subtitle: "الأرصدة السنوية، إجازات الوضع ورعاية الطفل، إجازة الحج، والامتحانات الدراسية",
+                    tag: "الاستحقاقات والراحات الإلزامية",
+                    description: "أقر المشرع في قانون العمل منظومة متكاملة لحقوق الإجازات بهدف صيانة طاقة العامل البدنية والتزاماته الاجتماعية، مع ربط الإجازات السنوية بمدد الخدمة المسجلة بطابعة المدد التأمينية.",
+                    tableData: {
+                        headers: ["نوع الإجازة", "المدة القانونية المستحقة", "الشروط الاستحقاقية ومعايير الصرف", "الأثر المالي والتأميني"],
+                        rows: [
+                            [
+                                "الإجازة السنوية (سنة 1)",
+                                "15 يوماً في السنة الأولى.",
+                                "تستحق بعد قضاء ستة أشهر خدمة لدى صاحب العمل.",
+                                "مدفوعة الأجر بالكامل من صاحب العمل."
+                            ],
+                            [
+                                "الإجازة السنوية (الاعتيادية)",
+                                "21 يوماً سنوياً.",
+                                "اعتباراً من السنة الثانية من بدء العمل لدى المنشأة.",
+                                "مدفوعة الأجر بالكامل."
+                            ],
+                            [
+                                "الإجازة السنوية (الممتدة)",
+                                "30 يوماً سنوياً.",
+                                "لمن أمضى 10 سنوات كاملة لدى صاحب عمل أو أكثر، أو لمن تجاوز سن 50 عاماً.",
+                                "تثبت المدد السابقة بتقديم طابعة التأمينات الرسمية."
+                            ],
+                            [
+                                "الإجازة السنوية (ذوي الإعاقة)",
+                                "45 يوماً سنوياً.",
+                                "تمنح للأشخاص ذوي الإعاقة والأقزام دون التقيد بمدة الخدمة في العمل.",
+                                "مدفوعة الأجر بالكامل مع حظر تقليصها."
+                            ],
+                            [
+                                "إجازة المناطق النائية والخطرة",
+                                "تزاد 7 أيام إضافية.",
+                                "للأعمال الخطرة أو المضرة بالصحة أو المناطق النائية المحددة وزارياً.",
+                                "تضاف تلقائياً فوق الرصيد المستحق للعامل."
+                            ],
+                            [
+                                "الإجازة المرضية (قانون 15/2017)",
+                                "3 أشهر أجر كامل، 6 أشهر بنسبة 85%، 3 أشهر بنسبة 75%.",
+                                "خلال كل ثلاث سنوات خدمة بناءً على قرار الهيئة العامة للتأمين الصحي.",
+                                "تسدد وفق أحكام قانون التأمينات الاجتماعية وهيئة التأمين الصحي."
+                            ],
+                            [
+                                "إجازة الوضع (المرأة العاملة)",
+                                "4 أشهر (تشمل ما قبل الوضع وما بعده).",
+                                "تستحق بحد أقصى 3 مرات طوال مدة الخدمة للمرأة شريطة تقديم شهادة طبية.",
+                                "تعويض بنسبة 75% من أجر الاشتراك التأميني من صندوق التأمينات."
+                            ],
+                            [
+                                "إجازة رعاية الطفل وإجازة الأبوة",
+                                "رعاية الطفل: حتى سنتين بدون أجر (3 مرات طوال الخدمة للمنشأة 50 عاملة فأكثر).",
+                                "يشترط مضي سنة خدمة، وألا تقل المدة بين الإجازة والأخرى عن سنتين. إجازة الأبوة: يوم واحد مدفوع الأجر.",
+                                "إجازة رعاية الطفل بدون أجر، وتتحمل الجهة أو الصندوق اشتراكات التأمين وفق اللائحة."
+                            ],
+                            [
+                                "إجازة فريضة الحج وزيارة القدس",
+                                "شهر كامل مدفوع الأجر.",
+                                "تمنح مرة واحدة طوال مدة الخدمة للعامل الذي أمضى 5 سنوات متصلة لدى صاحب العمل.",
+                                "مدفوعة الأجر بالكامل ولا تخصم من رصيد السنوي."
+                            ],
+                            [
+                                "الإجازة الدراسية (الامتحانات)",
+                                "عن أيام الامتحانات الفعلية.",
+                                "إخطار صاحب العمل قبل الإجازة بـ 10 أيام مع تقديم ما يثبت دخول الامتحان رسمياً.",
+                                "مدفوعة الأجر بالكامل ولا تحسب من رصيد الإجازات السنوية."
+                            ]
+                        ]
+                    }
+                },
+                {
+                    id: "sec-penalties",
+                    icon: "fa-gavel",
+                    title: "5. لائحة الجزاءات، ضوابط التحقيق، وحالات الانقطاع والغياب",
+                    subtitle: "التدرج التأديبي، حماية الأجر، شروط السقوط، وإجراءات الإنذار بالبريد المسجل",
+                    tag: "الانضباط والتأديب المؤسسي",
+                    description: "يلزم القانون المنشآت بتطبيق التدرج التأديبي وضمان حق الدفاع للموظف؛ مع اشتراط اعتماد لائحة الجزاءات من مكتب العمل وتعليقها بمكان ظاهر لضمان الشفافية ومصداقية القرارات.",
+                    cards: [
+                        {
+                            icon: "fa-scale-unbalanced",
+                            title: "سلم الجزاءات التأديبية المنصوص عليها قانوناً",
+                            items: [
+                                "الإنذار الكتابي الموجه للموظف.",
+                                "الخصم من الأجر (بما لا يجاوز 5 أيام في الشهر الواحد للمخالفات الإجمالية).",
+                                "تأجيل صرف العلاوة الدورية لمدة لا تزيد على ثلاثة أشهر، أو خفضها بما لا يجاوز النصف.",
+                                "خفض الأجر بما لا يزيد على قيمة علاوة واحدة على الأكثر.",
+                                "تأجيل الترقية لمدة لا تزيد على سنة واحدة.",
+                                "الخفض الوظيفي للمستوى الأدنى مباشرة دون المساس بقيمة الأجر المحتفظ به.",
+                                "الفصل من الخدمة (وهو اختصاص قضائي حصري للمحكمة العمالية إلا في حالات الأخطاء الجسيمة المثبتة)."
+                            ]
+                        },
+                        {
+                            icon: "fa-user-shield",
+                            title: "ضمانات التحقيق والمساءلة التأديبية",
+                            items: [
+                                "لا يجوز توقيع جزاء الخصم بما يتجاوز أجر يوم واحد إلا بعد إجراء تحقيق كتابي وسماع دفاع العامل.",
+                                "يُشترط ألا يقل المستوى الوظيفي للشخص القائم بالتحقيق عن مستوى العامل المحال للمساءلة.",
+                                "يجوز إيقاف العامل مؤقتاً لمصلحة التحقيق لمدة لا تزيد على 60 يوماً مع استمرار صرف أجره كاملاً.",
+                                "تسقط المخالفة التأديبية بمضي سنة كاملة من تاريخ ارتكابها وثبوت صلاحيتها.",
+                                "تعتبر أيام الغياب المتصلة بمثابة 'مخالفة واحدة'، بينما يعد الغياب في أيام منفصلة تكراراً للمخالفة يضاعف الجزاء."
+                            ]
+                        },
+                        {
+                            icon: "fa-person-walking-dashed-line-arrow-right",
+                            title: "إجراءات الانقطاع عن العمل والاستقالة الاعتبارية (المادة 166)",
+                            items: [
+                                "الانقطاع المتقطع: يعتبر مستقيلاً إذا تغيب أكثر من 20 يوماً متقطعة خلال السنة الواحدة، بشرط إنذاره بخطاب موصى عليه بعلم الوصول بعد غيابه 10 أيام.",
+                                "الانقطاع المتصل: يعتبر مستقيلاً إذا تغيب أكثر من 10 أيام متتالية، بشرط إنذاره رسمياً بعلم الوصول بعد غيابه 5 أيام متتالية.",
+                                "إرسال الإخطار بالاستقالة الاعتبارية رسمياً بعد استيفاء مدد الغياب دون تقديم عذر مقبول خلال المدد المحددة."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sec-workhours-foreigners",
+                    icon: "fa-business-time",
+                    title: "6. تنظيم ساعات العمل، الراحات، وقواعد تشغيل العمالة الأجنبية",
+                    subtitle: "معايير التشغيل، نسب التعويض الإضافي، وسقف استقدام وتعيين الأجانب",
+                    tag: "التشغيل ومعايير القوى العاملة",
+                    description: "يوازن القانون بين كفاءة تشغيل المنشآت وحماية صحة العمال؛ فضلاً عن فرض ضوابط حمائية صارمة للعمالة الوطنية عبر تقنين عمل الأجانب ونسب مشاركتهم المالية والعددية.",
+                    cards: [
+                        {
+                            icon: "fa-clock",
+                            title: "معايير ساعات العمل والراحات",
+                            items: [
+                                "الأعمال غير الشاقة: ساعات العمل الفعلية 8 ساعات يومياً، وتتخللها فترة راحة لتناول الطعام لا تقل عن ساعة (لا تحسب ضمن ساعات العمل)، بحيث لا يمكث العامل أكثر من 5 ساعات متصلة.",
+                                "الأعمال الشاقة: ساعات التواجد داخل مقر العمل 7 ساعات وتحسب فترات الراحة ضمن ساعات العمل الإلزامية.",
+                                "العمل الإضافي النهاري (6 صباحاً - 6 مساءً): يعوض عنه بأجر الساعة مضافاً إليه 35% (× 1.35).",
+                                "العمل الإضافي الليلي (6 مساءً - 6 صباحاً): يعوض عنه بأجر الساعة مضافاً إليه 70% (× 1.70).",
+                                "التكليف في يوم الراحة الأسبوعية: يعوض بمثل الأجر + يوم راحة بديل بالأسبوع التالي؛ وفي العطلات الرسمية يعوض بمثلي الأجر (2X) أو يوم بديل."
+                            ]
+                        },
+                        {
+                            icon: "fa-earth-africa",
+                            title: "ضوابط استقدام وتشغيل الأجانب",
+                            items: [
+                                "نسبة العمالة الأجنبية: يجب ألا تزيد عن 10% من إجمالي عدد العاملين بالمنشأة كحد أقصى.",
+                                "نسبة كتلة الأجور: الحد الأقصى لأجور العمالة الأجنبية يجب ألا يتجاوز 20% من إجمالي أجور منشأة العمل.",
+                                "شروط التأهيل: خبرة لا تقل عن 3 سنوات في مجال التخصص موثقة من السفارة المصرية ووزارة الخارجية.",
+                                "نقل الخبرة: التزام صاحب العمل بتعيين اثنين من المساعدين المصريين لكل خبير أجنبي لتدريبهم وتقييمهم سنوياً.",
+                                "المهن المحظورة قطعياً: يحظر على الأجانب العمل في الاستيراد والتصدير والتخليص الجمركي لحماية الاقتصاد الوطني.",
+                                "الجنسيات المعفاة من تصريح العمل: رعايا دول (السودان، فلسطين، لبنان، اليونان، وإيطاليا)."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sec-funds-inspection",
+                    icon: "fa-building-shield",
+                    title: "7. التزامات مكتب العمل، حصيلة الجزاءات، وقوائم التفتيش والغرامات",
+                    subtitle: "الصناديق العمالية الإلزامية، توجيه حصيلة الجزاءات، ومخاطر مخالفات التفتيش",
+                    tag: "الرقابة المالية والتفتيش الدوري",
+                    description: "تخضع المنشآت لرقابة مشددة من مفتشي وزارة العمل؛ حيث تفرض التزامات دورية بسداد حصص الصناديق الحكومية وحظر استغلال حصيلة الجزاءات داخلياً في غير الأغراض المحددة قانوناً.",
+                    tableData: {
+                        headers: ["اسم الصندوق والالتزام", "دورية التوريد", "شروط الإلزام وحجم العمالة", "حيثيات الحساب وطريقة السداد"],
+                        rows: [
+                            [
+                                "صندوق إعانة الطوارئ للعمال",
+                                "شهرياً (أول كل شهر)",
+                                "30 عاملاً فأكثر",
+                                "نسبة 1% من الأجور الأساسية للعاملين بشيك باسم الصندوق مرفقاً به نموذج التوريد الرسمي."
+                            ],
+                            [
+                                "صندوق الخدمات الاجتماعية والثقافية",
+                                "كل 3 أشهر (ربع سنوي)",
+                                "20 عاملاً فأكثر",
+                                "سداد اشتراك سنوي يتراوح بين 8 إلى 16 جنيهاً عن كل عامل سنوياً."
+                            ],
+                            [
+                                "صندوق تكريم الشهداء والضحايا",
+                                "شهرياً",
+                                "جميع المنشآت دون حد أدنى للعمالة",
+                                "استقطاع 5 جنيهات عن كل 10 آلاف جنيه من جملة الرواتب والأجور."
+                            ],
+                            [
+                                "صندوق التدريب والتأهيل",
+                                "سنوياً",
+                                "30 عاملاً فأكثر",
+                                "نسبة 0.25% من الحد الأدنى لأجر الاشتراك التأميني (بحد أدنى 10 جنيهات وبحد أقصى 30 جنيهاً لكل عامل)."
+                            ]
+                        ]
+                    },
+                    cards: [
+                        {
+                            icon: "fa-money-bill-transfer",
+                            title: "قواعد توزيع وصرف حصيلة الجزاءات",
+                            items: [
+                                "تعتبر حصيلة الجزاءات حقاً أصيلاً لرعاية العمال ولا يجوز لصاحب العمل صرفها كمكافآت أو أرباح للشركة.",
+                                "توزع الحصيلة بنسبة: ثلثين (2/3) لصالح الأنشطة الاجتماعية والرياضية والثقافية للعاملين بالمنشأة.",
+                                "يورد الثلث المتبقي (1/3) للمؤسسة الثقافية والاجتماعية التابعة لاتحاد العمال بمكتب العمل (بنسبة 70% ثقافية و30% اجتماعية)."
+                            ]
+                        },
+                        {
+                            icon: "fa-triangle-exclamation",
+                            title: "قائمة تفتيش مكتب العمل والعقوبات (المواد 281 - 285)",
+                            items: [
+                                "المادتان 4 و5 (حماية حقوق العمال): غرامة من 5,000 إلى 50,000 جنيه وتتعدد بتعدد العمال وتضاعف في العود.",
+                                "المادة 82 (بيانات خاطئة ونقل عمالة): غرامة من 1,000 إلى 10,000 جنيه وتتعدد بتعدد العمال.",
+                                "المواد 37 و48 و153 (شروط التوظيف والتقارير): غرامة من 2,000 إلى 10,000 جنيه وتضاعف في حالة العود.",
+                                "المادة 26 (حفظ السجلات وتقارير العمل): غرامة من 1,000 إلى 10,000 جنيه وتتعدد بتعدد العمال.",
+                                "المادة 23 (التشغيل بدون موافقة وترخيص): غرامة من 20,000 إلى 100,000 جنيه مع وجوب الحكم بإغلاق المنشأة."
+                            ]
+                        },
+                        {
+                            icon: "fa-book-bookmark",
+                            title: "إلزامية اللوائح والملفات المعتمدة",
+                            items: [
+                                "لائحة النظام الأساسي وتنظيم العمل: إلزامية لكل منشأة تستخدم 10 عمال فأكثر (تعتمد بتقديم 4 نسخ لمكتب العمل).",
+                                "لائحة الجزاءات التأديبية: إلزامية للمنشآت التي تضم 10 عمال فأكثر ويجب تعليقها بمكان ظاهر بالمنشأة.",
+                                "لائحة تشغيل النساء: إلزامية للمنشأة التي تشغل 5 عاملات فأكثر.",
+                                "لائحة تشغيل الأطفال: إلزامية في حال تشغيل طفل واحد فأكثر وفق القواعد والضوابط القانونية."
+                            ]
+                        }
+                    ],
+                    caseStudy: {
+                        title: "تطبيق عملي: خطة المعالجة القانونية والامتثال لمنشأة مخالفة لقانون العمل 14 لسنة 2025",
+                        tag: "دراسة حالة واقعية - كابستون المسار الثالث",
+                        body: "شركة صناعية يعمل بها 45 عاملاً، قامت بتشغيل مهندس أجنبي دون استخراج تصريح عمل ودون تعيين مساعدين مصريين له، وتستقطع مبالغ الجزاءات وتصرفها كمكافآت للمشرفين، وقامت بإنهاء خدمة عامل بسبب الغياب 6 أيام متصلة دون إرسال إنذار بريدي، ولم تقم بإرسال كعوب العمل منذ 6 أشهر وتفتقر للائحة جزاءات معتمدة. ما هي الإجراءات العاجلة التي يجب على مدير الموارد البشرية اتخاذها لتفادي الغلق والغرامات المشددة؟",
+                        recommendations: [
+                            "العمالة الأجنبية: توثيق مؤهلات المهندس الأجنبي فوراً، والتقدم بطلب استقدام رسمي للهيئة واستخراج تصريح العمل والإقامة، وتعيين اثنين من المهندسين المصريين كمساعدين له لتدريبهم.",
+                            "تصحيح الجزاءات والانقطاع: إيقاف صرف حصيلة الجزاءات كمكافآت وإيداع الثلث لمكتب العمل والثلثين للأنشطة، وسحب قرار إنهاء خدمة العامل المتغيب وبطلانه لعدم توجيه إنذار بعلم الوصول بعد اليوم الخامس طبقاً للمادة 166.",
+                            "توفيق الأوضاع مع مكتب العمل: إعداد 4 نسخ من لائحتي تنظيم العمل والجزاءات واعتمادهما رسمياً وتعليقهما، وحصر كعوب العمل وتسليمها بكشف تسليم رسمي مختوم لتفادي مخالفات التفتيش والغرامات المضاعفة وفق المواد 281-285."
+                        ]
+                    }
+                }
+            ],
+            quiz: {
+                title: "اختبار استيعاب قانون العمل والامتثال التنظيمي (Module 3 Knowledge Check)",
+                question: "وفقاً لأحكام قانون العمل رقم 14 لسنة 2025، ما هو التصرف القانوني السليم الواجب اتباعه في حالة تغيب عامل دون عذر مشروع لمدة 6 أيام متصلة؟",
+                options: [
+                    { text: "توجيه إنذار رسمي بخطاب موصى عليه بعلم الوصول للعامل بعد غيابه 5 أيام متتالية، ولا يجوز اعتباره مستقيلاً إلا بعد تمام 10 أيام متصلة.", correct: true },
+                    { text: "إصدار قرار فصل فوري للعامل من اليوم السادس وخصم مستحقاته كتعويض للمنشأة.", correct: false },
+                    { text: "الانتظار حتى مرور 20 يوماً متصلة لإخطاره تليفونياً بإنهاء خدمته.", correct: false },
+                    { text: "إلغاء عقده فوراً وإبلاغ التأمينات دون الحاجة لمخاطبته بريدياً ما دام الانقطاع ثابتاً بكشف الحضور.", correct: false }
+                ],
+                correctFeedback: "إجابة صحيحة تماماً! تنص المادة 166 على وجوب إنذار العامل بخطاب موصى عليه بعلم الوصول بعد مضي 5 أيام من الغياب المتصل، ولا تثبت الاستقالة الاعتبارية قانوناً إلا بتجاوز 10 أيام متتالية بعد تمام وصول الإنذار.",
+                wrongFeedback: "إجابة غير صحيحة! الفصل أو إنهاء الخدمة دون توجيه إنذار بريدي موصى عليه بعلم الوصول بعد مرور 5 أيام متصلة يعد باطلاً قانوناً ويدخل المنشأة في دائرة الفصل التعسفي والتعويضات."
+            }
+        };
+
+        function renderModule() {
+            const navList = document.getElementById('nav-list-container');
+            let navHtml = '';
+            for (let i = 0; i < moduleContent.navLinks.length; i++) {
+                const nav = moduleContent.navLinks[i];
+                const activeClass = i === 0 ? 'active' : '';
+                navHtml += '<li>' +
+                    '<a href="#' + nav.id + '" class="nav-link ' + activeClass + '" onclick="handleNavClick(event, \'' + nav.id + '\')">' +
+                    '<i class="fa-solid ' + nav.icon + '"></i>' +
+                    '<span>' + nav.text + '</span>' +
+                    '</a>' +
+                    '</li>';
+            }
+            navList.innerHTML = navHtml;
+
+            const container = document.getElementById('dynamic-sections-container');
+            let mainHtml = '';
+
+            for (let s = 0; s < moduleContent.sections.length; s++) {
+                const sec = moduleContent.sections[s];
+
+                mainHtml += '<section class="section-card" id="' + sec.id + '">';
+                
+                mainHtml += '<div class="section-header">' +
+                    '<div class="section-header-left">' +
+                        '<div class="section-icon-badge"><i class="fa-solid ' + sec.icon + '"></i></div>' +
+                        '<div>' +
+                            '<h2 class="section-title">' + sec.title + '</h2>' +
+                            '<p class="section-subtitle">' + sec.subtitle + '</p>' +
+                        '</div>' +
+                    '</div>' +
+                    '<span class="section-tag">' + sec.tag + '</span>' +
+                '</div>';
+
+                mainHtml += '<p style="color: var(--saba-text-sub); font-size: 0.96rem; margin-bottom: 20px; line-height: 1.7;">' + sec.description + '</p>';
+
+                if (sec.cycleData) {
+                    mainHtml += '<div class="cycle-container">';
+                    for (let cy = 0; cy < sec.cycleData.length; cy++) {
+                        const step = sec.cycleData[cy];
+                        mainHtml += '<div class="cycle-step">' +
+                            '<div class="cycle-step-icon"><i class="fa-solid ' + step.icon + '"></i></div>' +
+                            '<h4 class="cycle-step-title">' + step.title + '</h4>' +
+                            '<p class="cycle-step-desc">' + step.desc + '</p>' +
+                        '</div>';
+                    }
+                    mainHtml += '</div>';
+                }
+
+                if (sec.cards && sec.cards.length > 0) {
+                    const gridClass = sec.cards.length === 2 ? 'grid-2' : 'grid-3';
+                    mainHtml += '<div class="' + gridClass + '">';
+                    for (let c = 0; c < sec.cards.length; c++) {
+                        const card = sec.cards[c];
+                        mainHtml += '<div class="card-item">' +
+                            '<div class="card-item-header">' +
+                                '<div class="card-item-icon"><i class="fa-solid ' + card.icon + '"></i></div>' +
+                                '<h3 class="card-item-title">' + card.title + '</h3>' +
+                            '</div>' +
+                            '<ul class="card-item-list">';
+                        
+                        for (let itemIdx = 0; itemIdx < card.items.length; itemIdx++) {
+                            mainHtml += '<li>' + card.items[itemIdx] + '</li>';
+                        }
+
+                        mainHtml += '</ul></div>';
+                    }
+                    mainHtml += '</div>';
+                }
+
+                if (sec.tableData) {
+                    mainHtml += '<div class="data-table-wrap">' +
+                        '<table class="data-table">' +
+                            '<thead><tr>';
+                    for (let h = 0; h < sec.tableData.headers.length; h++) {
+                        mainHtml += '<th>' + sec.tableData.headers[h] + '</th>';
+                    }
+                    mainHtml += '</tr></thead><tbody>';
+                    
+                    for (let r = 0; r < sec.tableData.rows.length; r++) {
+                        const row = sec.tableData.rows[r];
+                        mainHtml += '<tr>';
+                        for (let d = 0; d < row.length; d++) {
+                            if (d === 0) {
+                                mainHtml += '<td style="font-weight: 700; color: var(--saba-navy);"><i class="fa-solid fa-scale-balanced" style="color: var(--saba-gold); margin-left: 6px;"></i> ' + row[d] + '</td>';
+                            } else {
+                                mainHtml += '<td>' + row[d] + '</td>';
+                            }
+                        }
+                        mainHtml += '</tr>';
+                    }
+                    mainHtml += '</tbody></table></div>';
+                }
+
+                if (sec.caseStudy) {
+                    mainHtml += '<div class="case-study-card" style="margin-top: 24px;">' +
+                        '<div class="case-study-title">' +
+                            '<i class="fa-solid fa-gavel"></i>' +
+                            '<span>' + sec.caseStudy.title + '</span>' +
+                            '<span class="case-tag">' + sec.caseStudy.tag + '</span>' +
+                        '</div>' +
+                        '<p style="font-size: 0.98rem; line-height: 1.7; margin-bottom: 16px; color: #F8FAFC;">' + sec.caseStudy.body + '</p>' +
+                        '<div style="background: rgba(255, 255, 255, 0.08); padding: 18px; border-radius: 10px; border-right: 4px solid var(--saba-gold);">' +
+                            '<h4 style="color: var(--saba-gold); font-size: 0.95rem; margin-bottom: 10px;"><i class="fa-solid fa-list-check"></i> خطة العمل والتوصيات القانونية الإلزامية:</h4>' +
+                            '<ul class="card-item-list" style="color: #ffffff;">';
+                    
+                    for (let rc = 0; rc < sec.caseStudy.recommendations.length; rc++) {
+                        mainHtml += '<li style="color: #E2E8F0;">' + sec.caseStudy.recommendations[rc] + '</li>';
+                    }
+                    
+                    mainHtml += '</ul></div></div>';
+
+                    // اختبار الاستيعاب المعرفي
+                    mainHtml += '<div class="interactive-panel" style="margin-top: 24px;">' +
+                        '<h3 style="color: var(--saba-navy); font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">' +
+                            '<i class="fa-solid fa-circle-question" style="color: var(--saba-accent-blue);"></i> ' + moduleContent.quiz.title +
+                        '</h3>' +
+                        '<p style="font-weight: 700; color: #334155; margin-bottom: 14px; font-size: 1rem;">' + moduleContent.quiz.question + '</p>' +
+                        '<div id="quiz-options-container">';
+
+                    for (let q = 0; q < moduleContent.quiz.options.length; q++) {
+                        const opt = moduleContent.quiz.options[q];
+                        mainHtml += '<div class="quiz-option" onclick="handleQuizAnswer(this, ' + opt.correct + ')">' +
+                            '<i class="fa-regular fa-circle" style="color: #94A3B8;"></i>' +
+                            '<span>' + opt.text + '</span>' +
+                        '</div>';
+                    }
+
+                    mainHtml += '</div>' +
+                        '<div id="quiz-feedback" class="feedback-message"></div>' +
+                    '</div>';
+                }
+
+                mainHtml += '</section>';
+            }
+
+            container.innerHTML = mainHtml;
+        }
+
+        function handleNavClick(e, targetId) {
+            e.preventDefault();
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+            }
+            document.getElementById('sidebar').classList.remove('mobile-open');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('sidebar').classList.toggle('mobile-open');
+        }
+
+        function handleQuizAnswer(element, isCorrect) {
+            const container = document.getElementById('quiz-options-container');
+            const feedback = document.getElementById('quiz-feedback');
+
+            const options = container.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.querySelector('i').className = 'fa-regular fa-circle';
+            });
+
+            if (isCorrect) {
+                element.classList.add('correct');
+                element.querySelector('i').className = 'fa-solid fa-circle-check';
+                feedback.innerHTML = '<span style="color: #15803D;"><i class="fa-solid fa-check"></i> ' + moduleContent.quiz.correctFeedback + '</span>';
+            } else {
+                element.classList.add('incorrect');
+                element.querySelector('i').className = 'fa-solid fa-circle-xmark';
+                feedback.innerHTML = '<span style="color: #B91C1C;"><i class="fa-solid fa-xmark"></i> ' + moduleContent.quiz.wrongFeedback + '</span>';
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section-card');
+            const scrollPos = window.scrollY + 140;
+
+            sections.forEach(sec => {
+                if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+                    const id = sec.getAttribute('id');
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderModule();
+        });
+    </script>
+</body>
+</html>
